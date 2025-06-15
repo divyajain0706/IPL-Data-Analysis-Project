@@ -52,3 +52,7 @@ same_count = df["toss_match_same"].value_counts()
 print(same_count)
 percentage_same = (df['toss_match_same'].sum() / len(df)) * 100
 print(f"Toss winner also won the match in {percentage_same:.2f}% of matches.")
+
+#Count frequency of player_of_match values.
+player_of_match = df["player_of_match"].value_counts()
+print(player_of_match)
