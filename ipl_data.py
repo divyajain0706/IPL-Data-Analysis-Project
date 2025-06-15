@@ -28,3 +28,8 @@ print(team_wins)
 #Team with highest wins
 print("\nTeam with highest wins :")
 print(team_wins.idxmax())
+
+#Count appearances of each team in team1 and team2.
+team_count = pd.concat([df['team1'], df['team2']]).value_counts()
+print("Count of each team in team1 and team2 :")
+print(team_count)
