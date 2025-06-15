@@ -56,3 +56,6 @@ print(f"Toss winner also won the match in {percentage_same:.2f}% of matches.")
 #Count frequency of player_of_match values.
 player_of_match = df["player_of_match"].value_counts()
 print(player_of_match)
+player_rewarded = player_of_match.idxmax()
+print("Player rewarded as player of the match most of the time is :")
+print(player_rewarded)
