@@ -45,3 +45,10 @@ print("Frequency of toss decision :")
 print(toss_frequency)
 print("The toss decision with high frequency is :")
 print(toss_frequency.idxmax())
+
+#Compare toss_winner with winner:
+df["toss_match_same"] = df["toss_winner"] == df["winner"]
+same_count = df["toss_match_same"].value_counts()
+print(same_count)
+percentage_same = (df['toss_match_same'].sum() / len(df)) * 100
+print(f"Toss winner also won the match in {percentage_same:.2f}% of matches.")
