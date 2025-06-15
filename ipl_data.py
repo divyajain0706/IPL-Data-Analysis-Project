@@ -19,3 +19,12 @@ print(df.columns)
 #Checking whether there are duplicate values or not
 print("Duplicate values if any :")
 print(df.duplicated().sum())
+
+#Count total match wins per team.
+team_wins = df['winner'].value_counts()
+print("Total matches win per team :")
+print(team_wins)
+
+#Team with highest wins
+print("\nTeam with highest wins :")
+print(team_wins.idxmax())
