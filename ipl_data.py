@@ -7,3 +7,11 @@ df = pd.read_csv(r"D:\Python Programs\pandas programs\IPL data project\matches.c
 #Displaying the concise information about the dataset
 print("Concise information about the dataset :")
 print(df.info())
+
+#Checking for missing values
+print("\nChecking for missing values :")
+print(df.isnull().sum())
+
+#Droping the umpire3 column
+df.drop(columns=["umpire3"],inplace=True)
+print(df.columns)
