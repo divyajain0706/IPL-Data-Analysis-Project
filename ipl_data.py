@@ -33,3 +33,8 @@ print(team_wins.idxmax())
 team_count = pd.concat([df['team1'], df['team2']]).value_counts()
 print("Count of each team in team1 and team2 :")
 print(team_count)
+
+#Count how many times each team won the toss.
+team_toss = df["toss_winner"].value_counts()
+print("Count of each team in toss :")
+print(team_toss)
