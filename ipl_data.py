@@ -38,3 +38,10 @@ print(team_count)
 team_toss = df["toss_winner"].value_counts()
 print("Count of each team in toss :")
 print(team_toss)
+
+#Analyze toss_decision choices (bat/field) frequency.
+toss_frequency = df["toss_decision"].value_counts()
+print("Frequency of toss decision :")
+print(toss_frequency)
+print("The toss decision with high frequency is :")
+print(toss_frequency.idxmax())
