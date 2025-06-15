@@ -15,3 +15,7 @@ print(df.isnull().sum())
 #Droping the umpire3 column
 df.drop(columns=["umpire3"],inplace=True)
 print(df.columns)
+
+#Checking whether there are duplicate values or not
+print("Duplicate values if any :")
+print(df.duplicated().sum())
