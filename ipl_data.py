@@ -80,3 +80,18 @@ print(season_count)
 successful_team = df.groupby("season")["winner"].value_counts().groupby(level=0).idxmax()
 print("Team with most wins per season is :")
 print(successful_team)
+
+#analyze how teams win: by runs or by wickets
+def match_type(row):
+    if row['win_by_runs'] > 0:
+        return 'Runs'
+    elif row['win_by_wickets'] > 0:
+        return 'Wickets'
+    else:
+        return 'No Result'
+
+df['win_type'] = df.apply(match_type, axis=1)
+win_type = df['win_type'].value_counts()
+print("Number of matches won by runs, wickets and no result :")
+print(win_type)
+
