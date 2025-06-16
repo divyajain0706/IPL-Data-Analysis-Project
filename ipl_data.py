@@ -59,3 +59,8 @@ print(player_of_match)
 player_rewarded = player_of_match.idxmax()
 print("Player rewarded as player of the match most of the time is :")
 print(player_rewarded)
+
+#Count number of matches hosted per venue.
+venue_count = df["venue"].value_counts()
+print("Number of matches hsoted per venue are :")
+print(venue_count)
