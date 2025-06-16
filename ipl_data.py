@@ -72,3 +72,11 @@ print(high_matches)
 venue_winner = df.groupby("venue")["winner"].value_counts().groupby(level=0).idxmax()
 print("Team with most wins at each venue is:")
 print(venue_winner)
+
+#Group by season to get match count per year.
+season_count = df.groupby("season")["id"].count()
+print("Number of matches per season :")
+print(season_count)
+successful_team = df.groupby("season")["winner"].value_counts().groupby(level=0).idxmax()
+print("Team with most wins per season is :")
+print(successful_team)
