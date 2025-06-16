@@ -62,5 +62,13 @@ print(player_rewarded)
 
 #Count number of matches hosted per venue.
 venue_count = df["venue"].value_counts()
-print("Number of matches hsoted per venue are :")
+print("Number of matches hosted per venue are :")
 print(venue_count)
+high_matches = venue_count.idxmax()
+print("Venue with high number of matches hosted is :")
+print(high_matches)
+
+#Find the team with most wins at each venue.
+venue_winner = df.groupby("venue")["winner"].value_counts().groupby(level=0).idxmax()
+print("Team with most wins at each venue is:")
+print(venue_winner)
